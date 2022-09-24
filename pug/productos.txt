@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Perfume Champions",
+    "price": 12500,
+    "thumbnail": "https://picsum.photos/id/10/200/150.webp",
+    "id": 1
+  },
+  {
+    "title": "Perfume Scandalete",
+    "price": 10500,
+    "thumbnail": "https://picsum.photos/id/20/200/150.webp",
+    "id": 2
+  },
+  {
+    "title": "Perfume Te fuiste a la B",
+    "price": 33333,
+    "thumbnail": "https://picsum.photos/id/3/200/150.webp",
+    "id": 3
+  },
+  {
+    "title": "Perfume Nueva Nueva York",
+    "price": 10502,
+    "thumbnail": "https://picsum.photos/id/40/200/150.webp",
+    "id": 5
+  },
+  {
+    "title": "Perfume Boston, MA - USA",
+    "price": 6666,
+    "thumbnail": "https://picsum.photos/id/50/200/150.webp",
+    "id": 6
+  },
+  {
+    "title": "Perfume La Crot's",
+    "price": 10500,
+    "thumbnail": "https://picsum.photos/id/6/200/150.webp",
+    "id": 7
+  },
+  {
+    "title": "Perfume Carton lleno",
+    "price": 11500,
+    "thumbnail": "https://picsum.photos/id/7/200/150.webp",
+    "id": 8
+  }
+]

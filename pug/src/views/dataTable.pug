@@ -1,0 +1,29 @@
+div(class="row mx-auto")
+    div(class="col-12 w-100 mx-auto")
+        div(class="card mx-auto shadow-lg p-5 mb-4 bg-body rounded w-auto")
+
+            table(class="table table-hover")
+            
+                thead
+                    tr
+                    th(scope="col-2" class="text-center") Id
+                    th(scope="col-3" class="text-center") Title
+                    th(scope="col-3" class="text-center") Price
+                    th(scope="col-4" class="text-center") url
+            
+                    if (!flag)
+                        tbody
+                            tr
+                                th(scope="row" colspan="12" class="text-center") No hay datos que mostrar
+                    
+                    else
+                        tbody
+                            each product in showProducts
+                                tr
+                                    td(class="text-center")= product.id
+                                    td(class="text-center")= product.title
+                                    td(class="text-center")= product.price
+                                    td(class="text-center"): img(src=product.thumbnail)
+                    
+div(class="d-block mx-auto my-4 pb-5 text-center")
+    a(class="btn btn-primary my-2" href="/index") Volver al Home
