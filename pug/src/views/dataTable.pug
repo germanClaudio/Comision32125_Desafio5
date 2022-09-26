@@ -1,6 +1,6 @@
 div(class="row mx-auto")
     div(class="col-12 w-100 mx-auto")
-        div(class="card mx-auto shadow-lg p-5 mb-4 bg-body rounded w-auto")
+        div(class="card mx-5 shadow-lg p-5 mb-4 bg-body rounded w-auto")
 
             table(class="table table-hover")
             
@@ -8,8 +8,9 @@ div(class="row mx-auto")
                     tr
                     th(scope="col-2" class="text-center") Id
                     th(scope="col-3" class="text-center") Title
-                    th(scope="col-3" class="text-center") Price
-                    th(scope="col-4" class="text-center") url
+                    th(scope="col-2" class="text-center") Price
+                    th(scope="col-2" class="text-center") Image
+                    th(scope="col-3" class="text-center") URL
             
                     if (!flag)
                         tbody
@@ -24,6 +25,7 @@ div(class="row mx-auto")
                                     td(class="text-center")= product.title
                                     td(class="text-center")= product.price
                                     td(class="text-center"): img(src=product.thumbnail)
+                                    td(class="text-center")= product.thumbnail
                     
 div(class="d-block mx-auto my-4 pb-5 text-center")
     a(class="btn btn-primary my-2" href="/index") Volver al Home

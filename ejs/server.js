@@ -1,4 +1,5 @@
 const express = require('express');
+const ejs = require('ejs');
 
 const app = express();
 
@@ -9,38 +10,36 @@ app.use(express.urlencoded({extended: true }))
 const Container = require('./Container')
 const products = new Container('./productos.txt')
 
-app.set('views', './src/views')
-app.set('view engine', 'pug')
+app.set('views', './src/views/pages')
+app.set('view engine', 'ejs')
 
 app.get('/index', (req, res) =>{
-    res.render('index.pug')
+    res.render('index.ejs')
 })
 
 app.get('/historial', (req, res) => {
     const showProducts = products.getAll()
     let flag = false
     if (showProducts.length > 0) {
-        flag = true
+        flag = true //cambiar a flase para probar if de page historial
     }    
-    res.render('historial.pug', { showProducts: showProducts, flag: flag } )
+    res.render('historial.ejs', { showProducts: showProducts, flag: flag } )
 })
 
 app.post("/index", (req, res) => {
-    console.log('Post: ' + JSON.stringify(req.body)) 
     const productoGuardar = {
         title: req.body.title,
         price: parseInt(req.body.price),
         thumbnail: req.body.thumbnail
     }
-    console.log('Datos post: ' + req.body)
-
+    
     const addProduct = products.saveProduct(productoGuardar)
-    res.render('index.pug', { addProduct: addProduct } )
+    res.render('index.ejs', { addProduct: addProduct } )
 })
 
 
 //------------ SERVER ----------
-const PORT = 8080
+const PORT = 4000
 
 const server = app.listen(PORT, ()=>{
     console.log(`Escuchando en el puerto ${PORT}`)

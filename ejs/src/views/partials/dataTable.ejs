@@ -1,0 +1,49 @@
+<div class="row mx-auto">
+    <div class="col-12 w-100 mx-auto">
+        <div class="card mx-5 shadow-lg p-5 mb-4 bg-body rounded w-auto">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col-2" class="text-center"> Id </th>
+                        <th scope="col-3" class="text-center"> Title </th>
+                        <th scope="col-2" class="text-center"> Price </th>
+                        <th scope="col-2" class="text-center"> Image </th>
+                        <th scope="col-3" class="text-center"> url </th>
+                    </tr>
+                </thead>
+                <% if (!flag) { %>
+                    <tbody>
+                        <tr>
+                            <th scope="row" colspan="12" class="text-center">No hay datos que mostrar</th>
+                        </tr>
+                    </tbody>
+                    <% } else { %>
+                        <tbody>
+                            <% showProducts.forEach(function(product) { %>
+                                <tr>
+                                    <td class="text-center">
+                                        <%= product.id %>
+                                    </td>
+                                    <td class="text-center">
+                                        <%= product.title %>
+                                    </td>
+                                    <td class="text-center">
+                                        <%= product.price %>
+                                    </td>
+                                    <td class="text-center">
+                                        <img src='<%= product.thumbnail %> '>
+                                    </td>
+                                    <td class="text-center">
+                                        <%= product.thumbnail %> 
+                                    </td>
+                                </tr>
+                                <% }); } %>
+                        </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="d-block mx-auto my-4 pb-5 text-center">
+        <a class="btn btn-primary my-2" href="/index"> Volver al Home </a>
+    </div>
+</div>

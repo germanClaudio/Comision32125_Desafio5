@@ -55,8 +55,8 @@
   },
   {
     "title": "Perfume Marca Cañon",
-    "price": 43444,
-    "thumbnail": "https://picsum.photos/id/33/200/150.webp",
+    "price": 66666,
+    "thumbnail": "https://picsum.photos/id/25/200/150.webp",
     "id": 11
   }
 ]
