@@ -1,0 +1,8 @@
+Eleccion plantilla EJS - German Montalbetti
+
+Definitivamente EJS se lleva mi preferencia quizas porque me parece mas simple de usar,
+ya que se parece bastante al lenguaje JAVA que incrusta codigo en el HTML con <% %>.
+No tiene tantas vueltas como PUG, ni hablar de HBS a la hora de incrustar codigo.
+
+Definitivamente, EJS se lleva mi preferencia.
+

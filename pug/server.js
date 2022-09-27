@@ -37,7 +37,6 @@ app.post("/index", (req, res) => {
     res.render('index.pug', { addProduct: addProduct } )
 })
 
-
 //------------ SERVER ----------
 const PORT = 8080
 

@@ -18,16 +18,16 @@ module.exports = class Container {
         return fileContent
     }
 
-    getById(id) {
-        const fileContent = this.products
-        const product = fileContent.find(product => product.id === parseInt(id))
+    // getById(id) {
+    //     const fileContent = this.products
+    //     const product = fileContent.find(product => product.id === parseInt(id))
         
-        if (product) {
-            return product
-        } else {
-            return { Error: 'Producto no encontrado!!' }
-        }
-    }
+    //     if (product) {
+    //         return product
+    //     } else {
+    //         return { Error: 'Producto no encontrado!!' }
+    //     }
+    // }
 
     saveProduct(productoGuardar) {
         const fileContent = this.products
@@ -48,52 +48,52 @@ module.exports = class Container {
         }
     }
 
-    updateProduct(id, title, price, thumbnail) {
-        const fileContent = this.products
-        const productId = fileContent.find(item => item.id === Number(id))
+    // updateProduct(id, title, price, thumbnail) {
+    //     const fileContent = this.products
+    //     const productId = fileContent.find(item => item.id === Number(id))
 
-        if (productId.id !== undefined && productId.id > 0 || productId !== {}) {
-            const nonUpdatedProducts = fileContent.filter(item => item.id !== parseInt(id))
-            const updatedProduct = { title, price, thumbnail, id: Number(id) }
+    //     if (productId.id !== undefined && productId.id > 0 || productId !== {}) {
+    //         const nonUpdatedProducts = fileContent.filter(item => item.id !== parseInt(id))
+    //         const updatedProduct = { title, price, thumbnail, id: Number(id) }
             
-            let array = [updatedProduct, ...nonUpdatedProducts]
-            let arrayOrdered = array.sort((a,b) => { a.id - b.id })
+    //         let array = [updatedProduct, ...nonUpdatedProducts]
+    //         let arrayOrdered = array.sort((a,b) => { a.id - b.id })
             
-            try {
-                this.products = fs.writeFileSync(this.myFile, JSON.stringify(arrayOrdered))
-                return { Success: `Producto id# ${id} actualizado con éxito de la Base de Datos!`,
-                         Title: updatedProduct.title,
-                         Price: updatedProduct.price,
-                         Thumbnail: updatedProduct.thumbnail
-                }
+    //         try {
+    //             this.products = fs.writeFileSync(this.myFile, JSON.stringify(arrayOrdered))
+    //             return { Success: `Producto id# ${id} actualizado con éxito de la Base de Datos!`,
+    //                      Title: updatedProduct.title,
+    //                      Price: updatedProduct.price,
+    //                      Thumbnail: updatedProduct.thumbnail
+    //             }
 
-            } catch (error) {
-                return { Error: `Error Actualizando Producto. Descripción error: ${error}` }
-            }
+    //         } catch (error) {
+    //             return { Error: `Error Actualizando Producto. Descripción error: ${error}` }
+    //         }
 
-        } else {
-            return { Error: 'Producto no encontrado!!' }
-        }
-    }
+    //     } else {
+    //         return { Error: 'Producto no encontrado!!' }
+    //     }
+    // }
 
-    deleteById(id) {
-        const fileContent = this.products
-        const nonDeletedProducts = fileContent.filter(item => item.id !== parseInt(id))
-        const productToBeDeleted = fileContent.filter(item => item.id === parseInt(id))
+    // deleteById(id) {
+    //     const fileContent = this.products
+    //     const nonDeletedProducts = fileContent.filter(item => item.id !== parseInt(id))
+    //     const productToBeDeleted = fileContent.filter(item => item.id === parseInt(id))
         
-        let arrayOrdered = nonDeletedProducts.sort((a,b) => { a.id - b.id })
+    //     let arrayOrdered = nonDeletedProducts.sort((a,b) => { a.id - b.id })
             
-        if (id !== undefined && productToBeDeleted.length > 0) {
+    //     if (id !== undefined && productToBeDeleted.length > 0) {
             
-                try {
-                    this.products = fs.writeFileSync(this.myFile, JSON.stringify(arrayOrdered, null, 2));
-                    return { Success: `Producto id# ${id} eliminado con éxito de la Base de Datos!` }
-                } catch (error) {
-                    return { Error: `Lo sentimos, hubo un error al escribir en archivo.`}
-                }
+    //             try {
+    //                 this.products = fs.writeFileSync(this.myFile, JSON.stringify(arrayOrdered, null, 2));
+    //                 return { Success: `Producto id# ${id} eliminado con éxito de la Base de Datos!` }
+    //             } catch (error) {
+    //                 return { Error: `Lo sentimos, hubo un error al escribir en archivo.`}
+    //             }
 
-        } else {
-            return { Error: `Lo sentimos, el Id# ${id}, NO existe en nuestra Base de Datos!` }
-        }
-    }
+    //     } else {
+    //         return { Error: `Lo sentimos, el Id# ${id}, NO existe en nuestra Base de Datos!` }
+    //     }
+    // }
 }
