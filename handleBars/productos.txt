@@ -2,55 +2,61 @@
   {
     "title": "Perfume Champions",
     "price": 12500,
-    "thumbnail": "http://localhost:4000/Perfume_1.jpg",
+    "thumbnail": "http://localhost:5050/Perfume_1.jpg",
     "id": 1
   },
   {
     "title": "Perfume Scandalete",
     "price": 10500,
-    "thumbnail": "http://localhost:4000/Perfume_6.jpg",
+    "thumbnail": "http://localhost:5050/Perfume_2.jpg",
     "id": 2
   },
   {
     "title": "Perfume Te fuiste a la B",
     "price": 33333,
-    "thumbnail": "http://localhost:4000/Perfume_2.jpg",
+    "thumbnail": "http://localhost:5050/Perfume_3.jpg",
     "id": 3
   },
   {
     "title": "Perfume Nueva Nueva York",
     "price": 10502,
-    "thumbnail": "http://localhost:4000/Perfume_3.jpg",
+    "thumbnail": "http://localhost:5050/Perfume_4.jpg",
     "id": 5
+  },
+  {
+    "title": "Perfume Boston, MA - USA",
+    "price": 6666,
+    "thumbnail": "http://localhost:5050/Perfume_5.jpg",
+    "id": 6
   },
   {
     "title": "Perfume La Crot's",
     "price": 10500,
-    "thumbnail": "http://localhost:4000/Perfume_1.jpg",
+    "thumbnail": "http://localhost:5050/Perfume_6.jpg",
     "id": 7
   },
   {
     "title": "Perfume Carton lleno",
     "price": 11500,
-    "thumbnail": "http://localhost:4000/Perfume_4.jpg",
+    "thumbnail": "http://localhost:5050/Perfume_1.jpg",
     "id": 8
   },
   {
     "title": "Perfume Barcelona",
     "price": 3222,
-    "thumbnail": "http://localhost:4000/Perfume_2.jpg",
+    "thumbnail": "http://localhost:5050/Perfume_2.jpg",
     "id": 9
   },
   {
     "title": "Perfume Test 1",
     "price": 5453,
-    "thumbnail": "http://localhost:4000/Perfume_6.jpg",
+    "thumbnail": "http://localhost:5050/Perfume_3.jpg",
     "id": 10
   },
   {
     "title": "Perfume Marca Cañon",
-    "price": 66666,
-    "thumbnail": "http://localhost:4000/Perfume_5.jpg",
+    "price": 43444,
+    "thumbnail": "http://localhost:5050/Perfume_4.jpg",
     "id": 11
   }
 ]

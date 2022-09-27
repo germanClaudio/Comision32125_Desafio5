@@ -1,5 +1,5 @@
 const express = require('express');
-const ejs = require('ejs');
+// const ejs = require('ejs');
 
 const app = express();
 
@@ -12,6 +12,7 @@ const products = new Container('./productos.txt')
 
 app.set('views', './src/views/pages')
 app.set('view engine', 'ejs')
+app.use(express.static('src/images'))
 
 app.get('/index', (req, res) =>{
     res.render('index.ejs')
